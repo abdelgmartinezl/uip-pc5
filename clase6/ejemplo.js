@@ -101,32 +101,46 @@
 // };
 // alert( persona.edad );
 
-let tropa = {
-    persona1: {
-        nombre: "Susana",
-        edad: 197
-    },
-    persona2: {
-        nombre: "Petra",
-        edad: 731
-    },
-    persona3: {
-        nombre: "Xenobia",
-        edad: 995
-    }
+// let tropa = {
+//     persona1: {
+//         nombre: "Susana",
+//         edad: 197
+//     },
+//     persona2: {
+//         nombre: "Petra",
+//         edad: 731
+//     },
+//     persona3: {
+//         nombre: "Xenobia",
+//         edad: 995
+//     }
+// };
+
+// function sumarTropa(nombre, edad) {
+//     return {
+//         nombre: nombre,
+//         edad: edad
+//     };
+// }
+
+// let recluta = sumarTropa("Calixtra", 150);
+// tropa["persona"+String(Object.keys(tropa).length+1)] = recluta;
+
+// for (let persona in tropa) {
+//     alert( "Que xopa, " + tropa[persona].nombre );
+// }
+// alert(Object.keys(tropa));
+
+let x = {
+    propiedad1: "Hola",
+    propiedad2: 50
 };
 
-function sumarTropa(nombre, edad) {
-    return {
-        nombre: nombre,
-        edad: edad
-    };
+let clon = {};
+
+for (let llave in x) {
+    clon[llave] = x[llave];
 }
 
-let recluta = sumarTropa("Calixtra", 150);
-tropa["persona"+String(Object.keys(tropa).length+1)] = recluta;
-
-for (let persona in tropa) {
-    alert( "Que xopa, " + tropa[persona].nombre );
-}
-alert(Object.keys(tropa));
+clon.propiedad3 = "Manies";
+alert( clon.propiedad3 );
