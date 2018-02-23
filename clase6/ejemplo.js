@@ -160,18 +160,26 @@
 // usuario[id1] = "Valor del ID";
 // alert( usuario[id1] );
 
-let estudiante = {
-    nombre: "Montoya",
-    edad: 15,
-    nota_final: 70.99,
+// let estudiante = {
+//     nombre: "Montoya",
+//     edad: 15,
+//     nota_final: 70.99,
 
-    saludar() {
-        alert("Habla, " + this.nombre);
-    }
+//     saludar() {
+//         alert("Habla, " + this.nombre);
+//     }
+// }
+
+// estudiante.saludar();
+// let imitacion = estudiante;
+// estudiante = null;
+// imitacion.saludar();
+
+function Usuario(nombre) {
+    this.nombre = nombre;
+    this.esAdmin = false;
 }
 
-estudiante.saludar();
-let imitacion = estudiante;
-estudiante = null;
-imitacion.saludar();
-
+let usuario = new Usuario("Petra");
+alert( usuario.nombre );
+alert( usuario.esAdmin );
