@@ -131,16 +131,47 @@
 // }
 // alert(Object.keys(tropa));
 
-let x = {
-    propiedad1: "Hola",
-    propiedad2: 50
-};
+// let x = {
+//     propiedad1: "Hola",
+//     propiedad2: 50
+// };
 
-let clon = {};
+// let clon = {};
 
-for (let llave in x) {
-    clon[llave] = x[llave];
+// for (let llave in x) {
+//     clon[llave] = x[llave];
+// }
+
+// clon.propiedad3 = "Manies";
+// alert( clon.propiedad3 );
+
+// let clon2 = { propiedad4: "Abududush" };
+// Object.assign(clon2, x)
+// for (let c in clon2) {
+//     alert(c + " : " + clon2[c]);
+// }
+
+// let id1 = Symbol("id");
+// let id2 = Symbol("id");
+// // alert( id1 == id2 );
+// // alert( id1 === id2 );
+
+// let usuario = { nombre: "Davis" };
+// usuario[id1] = "Valor del ID";
+// alert( usuario[id1] );
+
+let estudiante = {
+    nombre: "Montoya",
+    edad: 15,
+    nota_final: 70.99,
+
+    saludar() {
+        alert("Habla, " + this.nombre);
+    }
 }
 
-clon.propiedad3 = "Manies";
-alert( clon.propiedad3 );
+estudiante.saludar();
+let imitacion = estudiante;
+estudiante = null;
+imitacion.saludar();
+
