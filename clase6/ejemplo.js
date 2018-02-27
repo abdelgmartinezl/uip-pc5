@@ -175,11 +175,27 @@
 // estudiante = null;
 // imitacion.saludar();
 
-function Usuario(nombre) {
-    this.nombre = nombre;
-    this.esAdmin = false;
+// function Usuario(nombre) {
+//     this.nombre = nombre;
+//     this.esAdmin = false;
+// }
+
+// let usuario = new Usuario("Petra");
+// alert( usuario.nombre );
+// alert( usuario.esAdmin );
+
+let menu = {
+    width: 200,
+    height: 300,
+    titulo: "Fracase"
 }
 
-let usuario = new Usuario("Petra");
-alert( usuario.nombre );
-alert( usuario.esAdmin );
+function multiplicaMedidas(menu) {
+    return {
+        width: 400,
+        height: 600
+    }
+}
+
+multiplicaMedidas(menu);
+alert(menu.width);
