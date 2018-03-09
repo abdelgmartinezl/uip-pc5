@@ -1,6 +1,6 @@
 "use strict";
 
-let json = '{ "edad": 32 }';
+let json = '{ "nombre": "Karl" }';
 
 try {
     let usuario = JSON.parse(json);
@@ -9,9 +9,13 @@ try {
         throw new SyntaxError("Data incompleta: sin nombre");
     }
 
+    throw new MediaStreamError("No funciono");
+
     alert( usuario.nombre );
 } catch (err) {
-    alert("Lo siento mucho, esa data tiene errores");
-    alert( err.name );
-    alert( err.message );
+    if (err.name == "SyntaxError") {
+        alert("Lo siento mucho, esa data tiene errores");
+    } else {
+        alert("Es otra cosa");
+    }
 }
